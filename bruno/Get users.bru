@@ -1,15 +1,20 @@
 meta {
-  name: asdasd
+  name: Get users
   type: http
   seq: 2
 }
 
 get {
-  url: {{host}}/
+  url: {{host}}/users
   body: none
   auth: inherit
 }
 
+params:query {
+  ~role: ADMIN
+}
+
 settings {
   encodeUrl: true
+  timeout: 0
 }

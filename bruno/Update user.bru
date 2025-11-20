@@ -1,0 +1,28 @@
+meta {
+  name: Update user
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{host}}/users/:userId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  userId: 123
+}
+
+body:json {
+  {
+    "name": "Mitch",
+    "email": "mitch@westmoreland.me",
+    "role": "ADMIN"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
