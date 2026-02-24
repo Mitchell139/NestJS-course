@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres
+    container_name: postgres
+    # set shared memory limit when using docker compose
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: nest-course
+      POSTGRES_PASSWORD: uQCj^YT%2HveV2GfVvhKntN0
+      # POSTGRES_DB: nest-course
+    ports:
+      - '5432:5432'
