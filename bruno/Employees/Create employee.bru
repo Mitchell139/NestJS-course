@@ -1,0 +1,24 @@
+meta {
+  name: Create employee
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/employees
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Ken",
+    "email": "ken@email.com",
+    "role": "INTERN"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

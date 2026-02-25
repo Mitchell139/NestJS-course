@@ -1,0 +1,26 @@
+meta {
+  name: Update employee copy
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{host}}/employees/:userId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  userId: 2
+}
+
+body:json {
+  {
+    "role": "ENGINEER"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,17 +1,17 @@
 meta {
-  name: Delete user
+  name: Delete employee
   type: http
-  seq: 6
+  seq: 5
 }
 
 delete {
-  url: {{host}}/users/:userId
+  url: {{host}}/employees/:userId
   body: none
   auth: inherit
 }
 
 params:path {
-  userId: 123
+  userId: 2
 }
 
 settings {
